@@ -31,7 +31,7 @@ cmake-build-release/
 
 # File-based project format
 *.iws
-.idea
+.idea/
 *.iml
 # IntelliJ
 out/
@@ -41,9 +41,6 @@ out/
 
 # JIRA plugin
 atlassian-ide-plugin.xml
-
-# Cursive Clojure plugin
-.idea/replstate.xml
 
 # Crashlytics plugin (for Android Studio and IntelliJ)
 com_crashlytics_export_strings.xml
@@ -66,3 +63,6 @@ buildNumber.properties
 
 # Avoid ignoring Maven wrapper jar file (.jar files are usually ignored)
 !/.mvn/wrapper/maven-wrapper.jar
+/.gitignore
+src/main/resources/
+src/test/
