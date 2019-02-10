@@ -1,5 +1,6 @@
 package pl.sda.openweathet;
 
+import java.io.UnsupportedEncodingException;
 import java.net.MalformedURLException;
 import java.util.Scanner;
 
@@ -10,7 +11,7 @@ public class Main {
                 "http://api.apixu.com/v1/current.json",
                 "c58fd33d79104bb385190240191002"
         );
-        String city ;
+        String city;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Podaj miasto: ");
         while (!(city = scanner.nextLine()).equals("")) {
