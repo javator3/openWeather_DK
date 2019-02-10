@@ -1,9 +1,6 @@
 package pl.sda.openweathet;
 
-import java.io.UnsupportedEncodingException;
-import java.net.MalformedURLException;
 import java.util.Scanner;
-
 
 public class Main {
     public static void main(String[] args) {

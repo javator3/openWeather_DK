@@ -5,11 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import pl.sda.openweathet.model.Weather;
 
 import java.io.IOException;
-import java.net.URI;
-import java.net.URISyntaxException;
 import java.net.URL;
-import java.net.URLEncoder;
-
 
 public class WeatherService {
     private String url;
