@@ -1,30 +1,21 @@
 package pl.sda.openweathet;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import pl.sda.openweathet.model.Weather;
-
-
-import java.io.IOException;
-
 import java.net.MalformedURLException;
-import java.net.URI;
-import java.net.URL;
+import java.util.Scanner;
 
 
 public class Main {
-    public static void main(String[] args) throws MalformedURLException {
-
-        ObjectMapper objectMapper = new ObjectMapper();
-
-        URL url =  new URL("http://api.apixu.com/v1/current.json?key=c58fd33d79104bb385190240191002&q=Toru%C5%84");
-        Weather[] weathers;
-        try {
-            Weather weather =  objectMapper.readValue(url, Weather.class);
-            System.out.println("Pogoda : ");
-            System.out.println(weather);
-
-        } catch (IOException e) {
-                e.printStackTrace();
+    public static void main(String[] args) {
+        WeatherService weatherService = new WeatherService(
+                "http://api.apixu.com/v1/current.json",
+                "c58fd33d79104bb385190240191002"
+        );
+        String city ;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Podaj miasto: ");
+        while (!(city = scanner.nextLine()).equals("")) {
+            weatherService.getCityWeather(city);
+            System.out.println("Następne miasto: ");
         }
 
 
